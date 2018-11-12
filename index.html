@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Real Estate ChatBot</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico|Righteous" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {
+      background: #f7f7f7;
+    }
+
+    .checked {
+      color: orange;
+    }
+
+    .pointer {
+      cursor: pointer;
+    }
+
+    @media (max-width: 641px) {
+      /* .fa {
+        display: none;
+      } */
+    }
+
+    .h4,
+    h4 {
+      font-size: 15px !important;
+    }
+
+    .pacifico {
+      font-family: 'Pacifico', cursive;
+      color: #fff;
+    }
+
+    .slogan {
+      font-family: 'Righteous', cursive;
+      color: #000;
+    }
+
+    .white {
+      color: #fff;
+    }
+
+    .pointer:hover {
+      background: #eee;
+      color: #000;
+    }
+
+    .left {
+      float: left;
+      margin-right: -20px;
+      font-size: 16px;
+    }
+
+    .description {
+      min-width: 200px;
+      font-size: 12px;
+    }
+
+    .right {
+      float: right;
+      padding-right: 100px;
+    }
+
+    .bgImage {
+      background: url("https://www.tropical-islands.de/fileadmin/_processed_/csm_TI_RESTAURANT_TROPICAL-GARDEN1_RGB_2000x860_c3a4238088.jpg");
+      background-size: 100% 100%;
+    }
+    /* Styles for wrapping the search box */
+
+    .main {
+      width: 50%;
+      margin: 50px auto;
+    }
+    /* Bootstrap 4 text input with search icon */
+
+    .has-search .form-control {
+      padding-left: 2.375rem;
+    }
+
+    .jumbotron {
+      border-radius: 0px;
+    }
+
+    .has-search .form-control-feedback {
+      position: absolute;
+      z-index: 2;
+      display: block;
+      width: 2.375rem;
+      height: 2.375rem;
+      line-height: 2.375rem;
+      text-align: center;
+      pointer-events: none;
+      color: #aaa;
+    }
+
+    .form-control {
+      display: block;
+      width: 100%;
+      height: calc(2.25rem + 2px);
+      padding: .375rem .75rem;
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #495057;
+      background-color: #ffffffe0;
+      background-clip: padding-box;
+      border: 1px solid #ced4da;
+      border-radius: .25rem;
+      transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    }
+
+    .viewDetails {
+      margin-top: -14px;
+    }
+
+    .logoClient {
+      max-width: 200px;
+      text-align: center;
+      margin: auto;
+      width: 50%;
+    }
+
+    .img-right {
+      max-height: 100%;
+      min-height: 100%;
+      height: 100px;
+      border-radius: 10px;
+      float: right;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="jumbotron text-center bgImage">
+    <div>
+      <h1 class="pacifico"><img class="logoClient" src="joeys.jpg" alt=""></h1>
+    </div>
+
+
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="Type the menu ..." aria-label="Recipient's username" aria-describedby="basic-addon2">
+      <div class="input-group-append">
+        <button class="btn btn-primary" type="button">search</button>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">`
+        <p class="slogan">Our menu in images</p>
+        <div class="list-group">
+          <div class="list-group-item list-group-item-action">
+            <div class=" col-12 ">
+              <div class="left col-4">
+                <img class="img-right" src="https://www.easylebaneserecipes.com/wp-content/uploads/2018/06/Vegetarian-Recipe-Lebanese-Hummus-500x500.png"
+                  alt="">
+              </div>
+              <div class="left col-6">
+                <h4>Hummus</h4>
+                <div class="description">Well Served by JOEY Restaurants</div>
+                <p>
+                  <div class=" col-4">
+                    <div class="left">
+                      <button class="btn btn-outline-info btn-sm viewDetails" data-toggle="collapse" data-target="#hummus">+ View more</button>
+                    </div>
+                  </div>
+                </p>
+                <div class="city col-4 right">
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="list-group-item list-group-item-action">
+            <div id="hummus" class="collapse ">
+              <h2>Hummus</h2>
+              <div class="col-4 col-sm-4 col-md-4 pointer left" style="margin:0px; border: 1px solid #eee; padding: 7px; font-size: 14px;"><i class="fa fa-money" style="font-size:18px ;"> </i> $ 13.5</div>
+              <div class="col-4 col-sm-4 col-md-4 pointer left" style="margin:0px; border: 1px solid #eee;  padding: 7px; font-size: 14px;"><i class="fa fa-money" style="font-size:18px ;"> </i> </div>
+              <div class="col-4 col-sm-4 col-md-4 pointer left" style="margin:0px; border: 1px solid #eee;  padding: 7px; font-size: 14px;"><i class="fa fa-money" style="font-size:18px ;"> </i> </div>
+              <p>Details here..</p>
+
+            </div>
+          </a>
+
+          <div class="list-group-item list-group-item-action">
+            <div class=" col-12 ">
+              <div class="left col-4">
+                <img class="img-right" src="https://www.courtneyssweets.com/wp-content/uploads/2018/02/baked-hot-wings-10-500x500.jpg" alt="">
+              </div>
+              <div class="left col-6">
+                <h4>Chicken Wings</h4>
+                <div class="description">Well Served by JOEY Restaurants</div>
+                <p>
+                  <div class=" col-4">
+                    <div class="left">
+                      <button class="btn btn-outline-info btn-sm viewDetails" data-toggle="collapse" data-target="#chickenwings">+ View more</button>
+                    </div>
+                  </div>
+                </p>
+                <div class="city col-4 right">
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="list-group-item list-group-item-action">
+            <div id="chickenwings" class="collapse ">
+              <h2>chickenwings</h2>
+              <div class="col-4 col-sm-4 col-md-4 pointer left" style="margin:0px; border: 1px solid #eee; padding: 7px; font-size: 14px;"><i class="fa fa-money" style="font-size:18px ;"> </i> $ 13.5</div>
+              <div class="col-4 col-sm-4 col-md-4 pointer left" style="margin:0px; border: 1px solid #eee;  padding: 7px; font-size: 14px;"><i class="fa fa-money" style="font-size:18px ;"> </i> </div>
+              <div class="col-4 col-sm-4 col-md-4 pointer left" style="margin:0px; border: 1px solid #eee;  padding: 7px; font-size: 14px;"><i class="fa fa-money" style="font-size:18px ;"> </i> </div>
+              <p>Details here..</p>
+
+            </div>
+          </a>
+
+
+          <div class="list-group-item list-group-item-action">
+            <div class=" col-12 ">
+              <div class="left col-4">
+                <img class="img-right" src="https://www.readyseteat.com/sites/g/files/qyyrlu501/files/uploadedImages/img_8054_8923.jpg" alt="">
+              </div>
+              <div class="left col-6">
+                <h4>lettuce wraps</h4>
+                <div class="description">Well Served by JOEY Restaurants</div>
+                <p>
+                  <div class=" col-4">
+                    <div class="left">
+                      <button class="btn btn-outline-info btn-sm viewDetails" data-toggle="collapse" data-target="#demo">+ View more</button>
+                    </div>
+                  </div>
+                </p>
+                <div class="city col-4 right">
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="list-group-item list-group-item-action">
+            <div id="demo" class="collapse ">
+              <h2>Lettuce Wraps</h2>
+              <div class="col-4 col-sm-4 col-md-4 pointer left" style="margin:0px; border: 1px solid #eee; padding: 7px; font-size: 14px;"><i class="fa fa-money" style="font-size:18px ;"> </i> $ 13.5</div>
+              <div class="col-4 col-sm-4 col-md-4 pointer left" style="margin:0px; border: 1px solid #eee;  padding: 7px; font-size: 14px;"><i class="fa fa-money" style="font-size:18px ;"> </i> </div>
+              <div class="col-4 col-sm-4 col-md-4 pointer left" style="margin:0px; border: 1px solid #eee;  padding: 7px; font-size: 14px;"><i class="fa fa-money" style="font-size:18px ;"> </i> </div>
+              <p>Details here..</p>
+
+            </div>
+          </a>
+        </div>
+
+
+      </div>
+
+    </div>
+  </div>
+
+</body>
+
+</html>
